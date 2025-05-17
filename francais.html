@@ -7,53 +7,65 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e96443, #904e95);
+      background: linear-gradient(to right, #ff6a00, #ee0979);
       color: white;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #6c3483;
-      padding: 40px 20px;
+      background-color: #c0392b;
       text-align: center;
+      padding: 40px 20px;
     }
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
-    header p {
-      font-size: 1.2em;
-      color: #f9e79f;
-    }
     main {
       padding: 20px;
     }
-    section {
-      background-color: white;
+    .chapter {
+      background-color: #ffffff;
       color: #2c3e50;
-      padding: 20px;
-      border-radius: 10px;
       margin-bottom: 20px;
+      border-radius: 10px;
+      padding: 20px;
     }
-    section h2 {
-      color: #8e44ad;
+    .chapter h2 {
+      color: #e74c3c;
     }
-    ul {
-      list-style: disc;
-      padding-left: 20px;
+    .themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
     }
-    a {
+    .themes a {
+      background-color: #e74c3c;
       color: white;
-      display: inline-block;
-      margin: 15px;
+      padding: 10px 15px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      flex: 1 1 45%;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .themes a:hover {
+      background-color: #c0392b;
+    }
+    a.back {
+      display: inline-block;
+      margin: 20px;
+      color: white;
+      text-decoration: underline;
     }
     footer {
       background-color: #2c3e50;
       text-align: center;
       padding: 15px;
       color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -61,47 +73,47 @@
 
   <header>
     <h1>Français 3e</h1>
-    <p>Choisis un chapitre pour découvrir ses thèmes</p>
-    <a href="index.html">← Retour à l'accueil</a>
+    <p>Choisis un chapitre, puis un thème</p>
+    <a href="index.html" class="back">← Retour à l'accueil</a>
   </header>
 
   <main>
-    <section>
+    <div class="chapter">
       <h2>1. Se chercher, se construire</h2>
-      <ul>
-        <li>L'autobiographie</li>
-        <li>Le récit d'enfance</li>
-        <li>Le portrait et l'autoportrait</li>
-        <li>Le roman de formation</li>
-      </ul>
-    </section>
+      <div class="themes">
+        <a href="#">Autobiographie</a>
+        <a href="#">Roman de formation</a>
+        <a href="#">Récit d’enfance</a>
+        <a href="#">Portrait/autoportrait</a>
+      </div>
+    </div>
 
-    <section>
+    <div class="chapter">
       <h2>2. Vivre en société, participer à la société</h2>
-      <ul>
-        <li>La satire et la critique sociale</li>
-        <li>Littérature engagée</li>
-        <li>L'argumentation dans le discours</li>
-      </ul>
-    </section>
+      <div class="themes">
+        <a href="#">Littérature engagée</a>
+        <a href="#">Satire sociale</a>
+        <a href="#">Argumenter dans un débat</a>
+      </div>
+    </div>
 
-    <section>
+    <div class="chapter">
       <h2>3. Regarder le monde, inventer des mondes</h2>
-      <ul>
-        <li>Science-fiction et dystopie</li>
-        <li>Utopies et contre-utopies</li>
-        <li>Réécriture de mythes</li>
-      </ul>
-    </section>
+      <div class="themes">
+        <a href="#">Science-fiction</a>
+        <a href="#">Dystopie</a>
+        <a href="#">Réécriture de mythes</a>
+      </div>
+    </div>
 
-    <section>
+    <div class="chapter">
       <h2>4. Agir sur le monde</h2>
-      <ul>
-        <li>Discours politiques</li>
-        <li>Littérature argumentative</li>
-        <li>Appel à l'action, dénonciation</li>
-      </ul>
-    </section>
+      <div class="themes">
+        <a href="#">Discours politique</a>
+        <a href="#">Appel à l’action</a>
+        <a href="#">Dénoncer une injustice</a>
+      </div>
+    </div>
   </main>
 
   <footer>
