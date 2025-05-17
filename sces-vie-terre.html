@@ -1,13 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Sces-vie-terre - Wood_Educ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SVT 3e - WOOD-SUCCES-EDUCATION</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #fff;
+    }
+    header {
+      background-color: #16a085;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .chapter {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #2c3e50;
+    }
+    .chapter h2 {
+      margin-top: 0;
+      color: #16a085;
+    }
+    .themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .themes a {
+      flex: 1 1 45%;
+      background-color: #16a085;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .themes a:hover {
+      background-color: #1abc9c;
+    }
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .themes a {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Sces-vie-terre</h1>
-  <p>Contenu bientôt disponible.</p>
-  <a href="index.html">← Retour à l'accueil</a>
+  <header>
+    <h1>SVT 3e</h1>
+    <p>Choisis un chapitre puis un thème à explorer</p>
+  </header>
+
+  <div class="container">
+    <div class="chapter">
+      <h2>🌿 Corps humain et santé</h2>
+      <div class="themes">
+        <a href="#">La reproduction humaine</a>
+        <a href="#">Les hormones et la régulation du corps</a>
+        <a href="#">Le système nerveux et ses fonctions</a>
+        <a href="#">La défense de l’organisme</a>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>🌎 Environnement et évolution</h2>
+      <div class="themes">
+        <a href="#">La biodiversité et ses variations</a>
+        <a href="#">Les transformations des paysages</a>
+        <a href="#">Les interactions entre êtres vivants</a>
+        <a href="#">Les activités humaines et l'environnement</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Gustave Woodly | WOOD-SUCCES-EDUCATION – Ensemble on va plus loin.
+  </footer>
 </body>
 </html>
