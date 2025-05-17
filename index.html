@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="WOOD-SUCCES-EDUCATION - Cours gratuits pour collégiens par Gustave Woodly">
+  <meta name="keywords" content="cours gratuits, collège, maths, français, SVT, éducation, Gustave Woodly">
   <meta name="author" content="Gustave Woodly">
   <title>WOOD-SUCCES-EDUCATION - Gustave Woodly</title>
   <style>
@@ -77,7 +78,7 @@
       padding: 25px;
       margin-bottom: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      color: #2c3e50;
+      color: #1c1c1c;
       animation: fadeInUp 0.8s ease-in-out;
     }
 
@@ -175,7 +176,7 @@
 <body>
 
   <header>
-    <h1>WOOD-SUCCES-EDUCATIO0N</h1>
+    <h1>WOOD-SUCCES-EDUCATION</h1>
     <p>Créé par Gustave Woodly</p>
   </header>
 
@@ -191,7 +192,7 @@
     <p id="userWelcome" style="margin-top: 10px; font-weight: bold;"></p>
   </section>
 
-  <div class="container">
+  <main class="container">
     <div class="section">
       <h3>Bienvenue !</h3>
       <p>Je suis <strong>Gustave Woodly</strong>, passionné par l'apprentissage et l'entraide. J'ai créé ce site pour que chaque collégien ait une chance de progresser à son rythme.</p>
@@ -217,9 +218,9 @@
     <div class="section" id="contact">
       <h3>Contacte-moi directement</h3>
       <p>Tu as une question ? Tu veux m’écrire ? Clique ici pour m’envoyer un message :</p>
-      <a href="https://wa.me/594694165289" target="_blank">Discuter sur WhatsApp</a>
+      <a href="https://wa.me/594694165289" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a>
     </div>
-  </div>
+  </main>
 
   <footer>
     &copy; 2025 Gustave Woodly | WOOD-SUCCES-EDUCATION – Ensemble on va plus loin.
@@ -231,7 +232,7 @@
 
     input.addEventListener("input", () => {
       const name = input.value.trim();
-      welcome.textContent = name ? `Bienvenue, ${name} !` : "";
+      welcome.textContent = name.length > 0 ? `Bienvenue, ${name} !` : "";
     });
   </script>
 
