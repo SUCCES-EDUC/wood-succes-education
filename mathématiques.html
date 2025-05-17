@@ -1,13 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Mathématiques - Wood_Educ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Fractions - Mathématiques</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fefefe;
+    }
+
+    header {
+      background-color: #ff6f61;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+    }
+
+    nav {
+      background-color: #ff9f43;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    nav button {
+      background-color: #fff;
+      color: #ff9f43;
+      border: none;
+      margin: 0 10px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #e67e22;
+      color: #fff;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #f39c12;
+    }
+
+    .quiz {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .quiz p {
+      font-size: 1.1em;
+    }
+
+    .options button {
+      background-color: #fff;
+      color: #000;
+      margin: 8px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .options button:hover {
+      background-color: #ecf0f1;
+    }
+
+    .correct {
+      background-color: #27ae60 !important;
+      color: white !important;
+    }
+
+    .incorrect {
+      background-color: #c0392b !important;
+      color: white !important;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #contact {
+      background-color: #1abc9c;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #contact h2 {
+      color: white;
+    }
+
+    #contact a {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <h1>Mathématiques</h1>
-  <p>Contenu bientôt disponible.</p>
-  <a href="index.html">← Retour à l'accueil</a>
+
+<header>
+  <h1>Chapitre : Les Fractions</h1>
+</header>
+
+<nav>
+  <button onclick="showChapter('add')">Addition</button>
+  <button onclick="showChapter('sub')">Soustraction</button>
+  <button onclick="showChapter('muldiv')">Multiplication & Division</button>
+</nav>
+
+<main>
+  <section id="add" class="active">
+    <h2>Addition de Fractions</h2>
+    <p>Quand deux fractions ont le même dénominateur, on les additionne simplement en additionnant les numérateurs.</p>
+    <p><strong>Exemple :</strong> 2/5 + 1/5 = (2+1)/5 = 3/5</p>
+    <p>Si les dénominateurs sont différents, il faut trouver un dénominateur commun.</p>
+    <p><strong>Exemple :</strong> 1/4 + 1/6 = 3/12 + 2/12 = 5/12</p>
+
+    <div class="quiz">
+      <h3>Quiz :</h3>
+      <p>Combien vaut 2/7 + 3/7 ?</p>
+      <div class="options">
+        <button onclick="quizCheck(this, true)">5/7</button>
+        <button onclick="quizCheck(this, false)">6/7</button>
+        <button onclick="quizCheck(this, false)">1/7</button>
+        <button onclick="quizCheck(this, false)">4/7</button>
+      </div>
+      <div class="result"></div>
+    </div>
+  </section>
+
+  <section id="sub">
+    <h2>Soustraction de Fractions</h2>
+    <p>Les mêmes règles que pour l'addition s'appliquent, mais on soustrait les numérateurs.</p>
+    <p><strong>Exemple :</strong> 5/8 - 2/8 = (5 - 2)/8 = 3/8</p>
+
+    <div class="quiz">
+      <h3>Quiz :</h3>
+      <p>Combien vaut 6/9 - 2/9 ?</p>
+      <div class="options">
+        <button onclick="quizCheck(this, false)">2/9</button>
+        <button onclick="quizCheck(this, false)">4/8</button>
+        <button onclick="quizCheck(this, true)">4/9</button>
+        <button onclick="quizCheck(this, false)">3/9</button>
+      </div>
+      <div class="result"></div>
+    </div>
+  </section>
+
+  <section id="muldiv">
+    <h2>Multiplication et Division</h2>
+    <p><strong>Multiplication :</strong> On multiplie les numérateurs entre eux, et les dénominateurs entre eux.</p>
+    <p><strong>Exemple :</strong> 2/3 × 3/4 = 6/12 = 1/2</p>
+
+    <p><strong>Division :</strong> On multiplie la première fraction par l'inverse de la seconde.</p>
+    <p><strong>Exemple :</strong> (3/4) ÷ (2/5) = (3/4) × (5/2) = 15/8</p>
+
+    <div class="quiz">
+      <h3>Quiz :</h3>
+      <p>Combien vaut (1/2) × (3/5) ?</p>
+      <div class="options">
+        <button onclick="quizCheck(this, false)">4/10</button>
+        <button onclick="quizCheck(this, true)">3/10</button>
+        <button onclick="quizCheck(this, false)">2/5</button>
+        <button onclick="quizCheck(this, false)">1/7</button>
+      </div>
+      <div class="result"></div>
+    </div>
+  </section>
+</main>
+
+<section id="contact">
+  <h2>Contacte ton professeur</h2>
+  <p>Tu as une question ou tu veux un cours particulier ? Clique ci-dessous :</p>
+  <a href="https://wa.me/594694165289" target="_blank">Discuter sur WhatsApp</a>
+</section>
+
+<script>
+  function showChapter(id) {
+    document.querySelectorAll("section").forEach(sec => {
+      sec.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+  }
+
+  function quizCheck(button, isCorrect) {
+    const all = button.parentNode.querySelectorAll("button");
+    const result = button.parentNode.nextElementSibling;
+    all.forEach(b => {
+      b.disabled = true;
+      b.classList.remove("correct", "incorrect");
+    });
+    if (isCorrect) {
+      button.classList.add("correct");
+      result.textContent = "Bonne réponse !";
+      result.style.color = "#2ecc71";
+    } else {
+      button.classList.add("incorrect");
+      result.textContent = "Faux. Réessaie la prochaine fois !";
+      result.style.color = "#e74c3c";
+    }
+  }
+</script>
+
 </body>
 </html>
-
