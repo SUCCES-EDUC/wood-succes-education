@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Technologie - Wood_Educ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technologie 3e - WOOD-SUCCES-EDUCATION</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #34495e, #2980b9);
+      color: #fff;
+    }
+    header {
+      background-color: #2980b9;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .chapter {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #2c3e50;
+    }
+    .chapter h2 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+    .themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .themes a {
+      flex: 1 1 45%;
+      background-color: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .themes a:hover {
+      background-color: #3498db;
+    }
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .themes a {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Technologie</h1>
-  <p>Contenu bientôt disponible.</p>
-  <a href="index.html">← Retour à l'accueil</a>
+  <header>
+    <h1>Technologie 3e</h1>
+    <p>Choisis un chapitre puis un thème à explorer</p>
+  </header>
+
+  <div class="container">
+    <div class="chapter">
+      <h2>🔧 Conception et innovation</h2>
+      <div class="themes">
+        <a href="#">Analyse fonctionnelle d’un système</a>
+        <a href="#">Processus de conception</a>
+        <a href="#">Prototypage et modélisation</a>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>🔌 Énergie et environnement</h2>
+      <div class="themes">
+        <a href="#">Sources d’énergie</a>
+        <a href="#">Gestion de l’énergie</a>
+        <a href="#">Éco-conception</a>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>💻 Informatique et systèmes</h2>
+      <div class="themes">
+        <a href="#">Les réseaux et Internet</a>
+        <a href="#">Programmation et algorithmes</a>
+        <a href="#">Systèmes automatisés</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Gustave Woodly | WOOD-SUCCES-EDUCATION – Ensemble on va plus loin.
+  </footer>
 </body>
 </html>
-
